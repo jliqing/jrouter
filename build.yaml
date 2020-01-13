@@ -1,0 +1,29 @@
+# Read about `build.yaml` at https://pub.dartlang.org/packages/build_config
+targets:
+  $default:
+    builders:
+      jrouter|jroute_builder:
+        enabled: true
+        generate_for:
+          exclude: ['**.internal.dart']
+      jrouter|jroute_root_builder:
+        enabled: true
+        options: { 'write': true }
+        generate_for:
+          exclude: ['**.internal.dart']
+
+builders:
+  jroute_root_builder:
+    import: 'package:jrouter/builder.dart'
+    builder_factories: ['jrouteRootBuilder']
+    build_extensions: { '.route.dart': ['.internal.dart'] }
+    auto_apply: root_package
+    build_to: source
+
+  jroute_builder:
+    import: 'package:jrouter/builder.dart'
+    builder_factories: ['jrouteBuilder']
+    build_extensions: { '.dart': ['.internal_invalid.dart'] }
+    auto_apply: root_package
+    runs_before: ['jrouter|jroute_root_builder']
+    build_to: source
