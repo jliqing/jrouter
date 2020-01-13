@@ -6,15 +6,6 @@ import 'package:source_gen/source_gen.dart';
 class Collector {
   Collector();
 
-  /**
-   * 
-   * ```Dart
-   * <String, WidgetBuilder>{
-   *  "url": (BuildContext context) => A(),
-   * }
-   * ```
-   */
-
   Map<String, dynamic> routerMap = <String, dynamic>{};
   List<String> importList = <String>[];
 

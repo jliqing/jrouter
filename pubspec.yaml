@@ -1,8 +1,7 @@
 name: jrouter
 description: 一个基于注解的Flutter路由库.
 version: 0.0.1
-author:
-homepage:
+homepage: https://github.com/jliqing/jrouter
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
@@ -10,11 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  analyzer: any
-  build: any
-  source_gen: '>=0.8.0'
-  build_config: '>=0.3.0'
-  mustache4dart: any
+  analyzer: ^0.39.2+1
+  build: ^1.2.2
+  source_gen: ^0.8.0
+  build_config: ^0.3.0
+  mustache4dart: ^3.0.0
 
 dev_dependencies:
   flutter_test:
