@@ -1,4 +1,4 @@
-import 'package:mustache4dart/mustache4dart.dart';
+import 'package:mustache4dart2/mustache4dart2.dart';
 
 import 'collector.dart';
 import 'tpl.dart';

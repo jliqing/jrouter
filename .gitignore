@@ -76,3 +76,4 @@ build/
 
 # 生成的文件
 **.internal.dart
+pubspec.lock
